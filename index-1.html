@@ -1,65 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102c57">
-<title>Fliyer Express Angola</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b82">
+<title>Fliyer Express Angola | Produtos, Serviços e Publicidade</title>
 <style>
-:root{--navy:#102c57;--blue:#1769aa;--gold:#ffbf3f;--bg:#f4f7fb;--ink:#172235;--muted:#65748b;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;padding:22px 16px 28px}
-.wrap{max-width:1000px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:14px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:25px;font-weight:900}
-h1{font-size:22px;margin:0}header p{margin:7px 0 0;color:#e3edfa}.hero{padding:24px 0 0}.hero h2{font-size:27px;margin:0 0 8px}.hero p{line-height:1.5;max-width:650px}
-main{max-width:1000px;margin:18px auto;padding:0 14px}.notice{background:#fff7df;border:1px solid #f0d17b;padding:12px 14px;border-radius:12px;font-size:13px;line-height:1.45;margin-bottom:16px}
-.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.toolbar input,.toolbar select,input,textarea,select{font:inherit;padding:12px;border:1px solid #d5deea;border-radius:10px;width:100%;background:white}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px}.card,.panel{background:white;border:1px solid #e4eaf2;border-radius:15px;overflow:hidden;box-shadow:0 3px 12px #0e2b5010}.photo{height:145px;background:#e8eef7;display:grid;place-items:center;font-size:46px;color:#8394ac}.cardbody{padding:14px}.tag{display:inline-block;background:#eaf2ff;color:#164d91;padding:5px 8px;border-radius:20px;font-size:11px;font-weight:bold}.card h3{margin:10px 0 6px;font-size:18px}.price{color:#0b7a4b;font-weight:bold;font-size:17px}.muted{color:var(--muted);font-size:13px;line-height:1.45}.btn{display:inline-block;border:0;border-radius:10px;background:var(--blue);color:white;padding:11px 14px;font-weight:bold;text-decoration:none;cursor:pointer;text-align:center}.btn.gold{background:var(--gold);color:#192744}.btn.secondary{background:#eaf0f8;color:#17365f}.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.sectiontitle{display:flex;justify-content:space-between;align-items:center;margin:20px 0 12px;gap:10px}.sectiontitle h2{margin:0;font-size:20px}.panel{padding:16px;margin:18px 0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{grid-column:1/-1}label{display:block;font-size:12px;font-weight:bold;margin:0 0 5px;color:#40516a}.field{min-width:0}.empty{text-align:center;padding:30px;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 12px}
-@media(max-width:560px){.toolbar,.formgrid{grid-template-columns:1fr}.hero h2{font-size:23px}.full{grid-column:auto}}
+:root{--navy:#082e68;--blue:#0869c9;--gold:#ffc629;--green:#00a96b;--ink:#102c54;--muted:#607a9c;--line:#d8e6f7;--bg:#f4f9ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}
+.top{background:linear-gradient(115deg,#082e68,#0869c9);color:white;padding:16px max(18px,calc((100% - 1180px)/2));}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:13px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:29px;font-weight:900}
+.brand h1{font-size:22px;margin:0 0 4px}.brand p{margin:0;font-size:13px;opacity:.9}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:9px;padding:12px 16px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}.btn-gold{background:var(--gold);color:#092d62}.btn-green{background:var(--green);color:#fff}.btn-blue{background:var(--blue);color:#fff}.hero{max-width:1180px;margin:22px auto 0;display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center}.hero h2{font-size:clamp(25px,3vw,38px);line-height:1.12;margin:0 0 12px}.hero p{line-height:1.6;margin:0;max-width:560px}.hero-image{height:155px;border-radius:16px;background:linear-gradient(90deg,rgba(8,46,104,.1),rgba(8,46,104,.05)),url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85') center 48%/cover;box-shadow:0 10px 25px #001e4933}
+main{max-width:1180px;margin:18px auto;padding:0 16px}.notice{border:1px solid #ffdc77;background:#fff8df;padding:13px 15px;border-radius:10px;font-size:13px;line-height:1.5;margin-bottom:22px}.section-title{font-size:23px;margin:0 0 14px}.search-row{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-bottom:14px}.search-box,.select-box{display:flex;align-items:center;background:white;border:1px solid #cbdcf1;border-radius:9px;padding:0 12px;gap:9px}.search-box input,.select-box select{border:0;outline:0;background:transparent;width:100%;padding:13px 0;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 3px 10px #123d7010;display:flex;flex-direction:column;min-width:0}.product-img{width:100%;height:165px;object-fit:cover;background:#e8f0fa}.card-body{padding:11px;display:flex;flex-direction:column;flex:1}.tag{font-size:11px;font-weight:700;background:#e6f1ff;color:#0758b6;border-radius:20px;padding:5px 8px;align-self:flex-start;margin-bottom:7px}.card h3{font-size:15px;line-height:1.3;margin:0 0 5px}.price{color:#009a60;font-weight:800;font-size:16px;margin:0 0 5px}.location{font-size:12px;color:#64809f;margin-bottom:8px}.desc{font-size:12px;line-height:1.45;color:#607a9c;margin:0 0 12px;flex:1}.contact{width:100%;padding:10px 8px;font-size:12px;background:var(--green);color:white;border:0;border-radius:7px;font-weight:700;text-decoration:none;text-align:center}.empty{grid-column:1/-1;padding:28px;text-align:center;background:white;border:1px dashed #b7cbe5;border-radius:10px}
+.publish{margin-top:24px;background:white;border:1px solid var(--line);border-radius:13px;padding:18px}.publish-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.publish-head h2{margin:0;font-size:22px}.badge{font-size:11px;background:#e8f1ff;color:#0758b6;padding:6px 9px;border-radius:20px;font-weight:700}
+.form-grid{display:grid;grid-template-columns:245px 1fr 1fr;gap:14px}.photo-picker{border:1px dashed #8fb7e8;border-radius:10px;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;background:#f8fbff}.photo-picker img{width:100%;max-height:150px;object-fit:contain;margin-bottom:8px;display:none}.photo-icon{font-size:36px;color:#52749b}.photo-picker strong{font-size:13px;margin:8px 0}.photo-picker small{color:var(--muted);font-size:11px;margin-bottom:10px}.choose{background:#e3efff;color:#0758b6;border-radius:7px;padding:9px 12px;font-size:12px;font-weight:700;cursor:pointer}.fields{display:grid;gap:12px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #cbdcf1;border-radius:7px;padding:11px;background:#fff;outline-color:#68a7ef;color:var(--ink)}.field textarea{resize:vertical;min-height:74px}.full{grid-column:1/-1}.submit{width:100%;margin-top:14px}.how{margin:14px 0 20px;background:#eaf4ff;border:1px solid #d5e7fa;border-radius:10px;padding:15px;line-height:1.6;font-size:13px}.footer{background:#06295c;color:white;text-align:center;padding:23px 15px;font-size:12px;line-height:1.8}.float-wa{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#00b977;color:white;display:grid;place-items:center;text-decoration:none;font-size:26px;box-shadow:0 5px 18px #001a3c40;z-index:5}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.form-grid{grid-template-columns:220px 1fr}.photo-picker{grid-row:span 2}.hero{padding:0 16px}.hero-image{height:140px}}
+@media(max-width:640px){.top{padding:14px 16px}.brand h1{font-size:19px}.actions{width:100%}.actions .btn{flex:1;font-size:12px;padding:11px 8px}.hero{grid-template-columns:1fr;margin-top:20px;gap:15px}.hero-image{height:120px}.search-row{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-img{height:130px}.card-body{padding:9px}.card h3{font-size:13px}.price{font-size:14px}.desc{font-size:11px}.form-grid{grid-template-columns:1fr}.photo-picker{grid-row:auto;min-height:160px}.publish{padding:13px}.section-title{font-size:21px}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}.product-img{height:190px}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <div class="brand"><div class="logo">F</div><div><h1>Fliyer Express Angola</h1><div style="font-size:12px;opacity:.9;margin-top:3px">Produtos • Serviços • Publicidade</div></div></div>
-  <div class="hero"><h2>Encontre clientes. Divulgue o seu negócio.</h2><p>Uma vitrine digital simples para comerciantes e prestadores de serviços em Angola. Publique um anúncio e fale diretamente com o vendedor.</p><a class="btn gold" href="#publicar">Publicar anúncio grátis</a></div>
-</div></header>
+<header class="top">
+  <div class="nav">
+    <div class="brand"><div class="logo">F</div><div><h1>Fliyer Express Angola</h1><p>Produtos • Serviços • Publicidade</p></div></div>
+    <div class="actions"><a class="btn btn-gold" href="#publicar">📣 Publicar anúncio grátis</a><a class="btn btn-green" href="https://wa.me/244950325536?text=Ol%C3%A1%2C%20vim%20pelo%20Fliyer%20Express%20Angola." target="_blank" rel="noopener">☏ Falar pelo WhatsApp</a></div>
+  </div>
+  <div class="hero"><div><h2>Encontre clientes. Divulgue o seu negócio.</h2><p>Uma vitrine digital simples para comerciantes e prestadores de serviços em Angola. Publique um anúncio e fale diretamente com o vendedor.</p></div><div class="hero-image" role="img" aria-label="Vista urbana"></div></div>
+</header>
 <main>
-<div class="notice"><strong>Versão inicial de demonstração:</strong> os anúncios são guardados apenas neste navegador/telemóvel. Ainda não existe uma base de dados online, autenticação real nem pagamentos. Não publiques dados sensíveis.</div>
-<div class="sectiontitle"><h2>Explorar anúncios</h2><button class="btn secondary" id="resetDemo" type="button">Repor demonstração</button></div>
-<div class="toolbar"><input id="search" placeholder="Pesquisar produtos ou serviços…"><select id="filter"><option value="">Todas as categorias</option><option>Moda</option><option>Eletrónica</option><option>Alimentação</option><option>Beleza</option><option>Serviços</option><option>Casa</option><option>Outros</option></select></div>
-<div id="listings" class="grid"></div>
-<section id="publicar" class="panel">
-<div class="sectiontitle"><h2>Publicar anúncio</h2><span class="tag">Grátis nesta versão</span></div>
-<form id="listingForm"><div class="formgrid">
-<div class="field"><label for="title">Nome do produto/serviço *</label><input id="title" required maxlength="70" placeholder="Ex.: Sapatos masculinos"></div>
-<div class="field"><label for="category">Categoria *</label><select id="category" required><option>Moda</option><option>Eletrónica</option><option>Alimentação</option><option>Beleza</option><option>Serviços</option><option>Casa</option><option>Outros</option></select></div>
-<div class="field"><label for="price">Preço (Kz)</label><input id="price" type="number" min="0" placeholder="Ex.: 15000"></div>
-<div class="field"><label for="city">Cidade/localidade</label><input id="city" maxlength="50" placeholder="Ex.: Benguela"></div>
-<div class="field"><label for="phone">WhatsApp com indicativo do país *</label><input id="phone" required placeholder="Ex.: 2449XXXXXXXX"></div>
-<div class="field"><label for="emoji">Ícone do anúncio</label><select id="emoji"><option>🛍️</option><option>👕</option><option>👟</option><option>📱</option><option>🍲</option><option>💇</option><option>🛠️</option><option>🏠</option><option>🎨</option></select></div>
-<div class="field full"><label for="description">Descrição</label><textarea id="description" rows="3" maxlength="300" placeholder="Descreva o produto ou serviço…"></textarea></div>
-<div class="field full"><button class="btn" type="submit">Publicar anúncio</button></div>
-</div></form></section>
-<section class="panel"><h2 style="margin-top:0">Como funciona</h2><div class="muted">1. Publique um produto ou serviço. 2. O cliente pesquisa e encontra o anúncio. 3. O contacto é feito pelo WhatsApp. Na primeira versão, o vendedor e o comprador combinam diretamente preço, pagamento e entrega.</div></section>
+  <div class="notice"><strong>ⓘ Versão inicial de demonstração:</strong> os anúncios publicados ficam guardados apenas neste navegador/telemóvel. Ainda não existe uma base de dados online. Não publique dados sensíveis.</div>
+  <section>
+    <h2 class="section-title">Explorar anúncios</h2>
+    <div class="search-row">
+      <label class="search-box">⌕ <input id="search" type="search" placeholder="Pesquisar produtos ou serviços..." aria-label="Pesquisar anúncios"></label>
+      <label class="select-box">▦ <select id="category" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option><option>Moda</option><option>Eletrónica</option><option>Alimentação</option><option>Beleza</option><option>Serviços</option><option>Casa</option><option>Imóveis</option></select></label>
+    </div>
+    <div id="listings" class="grid"></div>
+  </section>
+  <section class="publish" id="publicar">
+    <div class="publish-head"><h2>Publicar anúncio</h2><span class="badge">Grátis nesta versão</span></div>
+    <form id="adForm">
+      <div class="form-grid">
+        <div class="photo-picker">
+          <img id="preview" alt="Pré-visualização da fotografia selecionada">
+          <div id="photoIcon" class="photo-icon">▧</div><strong>Fotografia do produto/serviço</strong><small>Clique para escolher ou arraste a imagem</small>
+          <label class="choose" for="photo">Selecionar ficheiro</label><input id="photo" type="file" accept="image/*" hidden>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="name">Nome do produto/serviço *</label><input id="name" required maxlength="70" placeholder="Ex.: Sapatos masculinos"></div>
+          <div class="field"><label for="price">Preço (Kz) *</label><input id="price" required type="number" min="0" placeholder="Ex.: 15000"></div>
+          <div class="field"><label for="phone">WhatsApp com indicativo do país *</label><input id="phone" required inputmode="tel" placeholder="Ex.: 950325536 ou 244950325536"></div>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="newCategory">Categoria *</label><select id="newCategory" required><option value="Moda">Moda</option><option>Eletrónica</option><option>Alimentação</option><option>Beleza</option><option>Serviços</option><option>Casa</option><option>Imóveis</option></select></div>
+          <div class="field"><label for="city">Cidade/localidade *</label><input id="city" required placeholder="Ex.: Benguela"></div>
+          <div class="field"><label for="description">Descrição *</label><textarea id="description" required maxlength="300" placeholder="Descreva o produto ou serviço..."></textarea></div>
+        </div>
+      </div>
+      <button class="btn btn-blue submit" type="submit">➤ Publicar anúncio</button>
+    </form>
+  </section>
+  <div class="how"><strong>💡 Como funciona</strong><br>1. Publique um produto ou serviço com uma fotografia real. 2. Os visitantes pesquisam e encontram o anúncio. 3. O contacto é feito diretamente pelo WhatsApp. Nesta primeira versão, a publicação só aparece neste mesmo navegador/telemóvel.</div>
 </main>
-<footer>Fliyer Express Angola • Protótipo inicial • Feito para testar a ideia com comerciantes reais.</footer>
+<footer class="footer">Fliyer Express Angola • Protótipo inicial • Feito para testar a ideia com comerciantes reais.<br><strong>WhatsApp: 950 325 536</strong></footer>
+<a class="float-wa" href="https://wa.me/244950325536?text=Ol%C3%A1%2C%20vim%20pelo%20Fliyer%20Express%20Angola." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">☏</a>
 <script>
-const seed=[
- {id:1,title:"Sapatos masculinos",category:"Moda",price:18000,city:"Benguela",phone:"244900000000",emoji:"👟",description:"Exemplo de anúncio. Substitua pelos dados reais do seu negócio."},
- {id:2,title:"Criação de flyers",category:"Serviços",price:5000,city:"Luanda",phone:"244900000000",emoji:"🎨",description:"Design de cartazes e publicidade para pequenos negócios."},
- {id:3,title:"Acessórios para telemóvel",category:"Eletrónica",price:7500,city:"Benguela",phone:"244900000000",emoji:"📱",description:"Exemplo demonstrativo de produto."}
+const WA_OWNER='244950325536';
+const stock=[
+ {id:'s1',name:'Sapatos desportivos',category:'Moda',price:15000,city:'Benguela',description:'Sapatos confortáveis e duráveis para o dia a dia. Vários tamanhos disponíveis.',image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s2',name:'Telemóvel Samsung',category:'Eletrónica',price:95000,city:'Benguela',description:'Telemóvel em bom estado. Consulte disponibilidade e detalhes com o vendedor.',image:'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s3',name:'Salgados variados',category:'Alimentação',price:2000,city:'Benguela',description:'Salgados frescos para festas, reuniões e encomendas especiais.',image:'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s4',name:'Produtos de beleza',category:'Beleza',price:12000,city:'Benguela',description:'Produtos de cuidado pessoal. Pergunte pelos produtos disponíveis.',image:'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s5',name:'Reparação de computadores',category:'Serviços',price:7500,city:'Benguela',description:'Diagnóstico, instalação de programas e manutenção de computadores.',image:'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s6',name:'Sofá para sala',category:'Casa',price:250000,city:'Benguela',description:'Sofá confortável para a sua sala. Contacte para confirmar modelos e entrega.',image:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s7',name:'Vestidos femininos',category:'Moda',price:18000,city:'Benguela',description:'Modelos elegantes para várias ocasiões. Consulte tamanhos e cores.',image:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER},
+ {id:'s8',name:'Casa para venda',category:'Imóveis',price:50000000,city:'Benguela',description:'Exemplo de anúncio imobiliário. Confirme a localização e os detalhes antes de visitar.',image:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85',phone:WA_OWNER}
 ];
-const key="fliyerExpressListings_v1";
-function getItems(){try{const d=JSON.parse(localStorage.getItem(key));return Array.isArray(d)?d:seed}catch(e){return seed}}
-function saveItems(a){localStorage.setItem(key,JSON.stringify(a))}
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function wa(phone,title){let n=phone.replace(/\D/g,"");if(n.startsWith("0"))n="244"+n.slice(1);return "https://wa.me/"+n+"?text="+encodeURIComponent("Olá! Vi o anúncio \""+title+"\" no Fliyer Express Angola. Ainda está disponível?")}
-function render(){const q=document.getElementById("search").value.toLowerCase();const cat=document.getElementById("filter").value;const items=getItems().filter(x=>(!cat||x.category===cat)&&(`${x.title} ${x.description} ${x.city} ${x.category}`).toLowerCase().includes(q));const root=document.getElementById("listings");if(!items.length){root.innerHTML='<div class="empty">Não foram encontrados anúncios. Tente outra pesquisa ou publique o primeiro anúncio.</div>';return}
-root.innerHTML=items.map(x=>`<article class="card"><div class="photo">${esc(x.emoji||"🛍️")}</div><div class="cardbody"><span class="tag">${esc(x.category)}</span><h3>${esc(x.title)}</h3><div class="price">${Number(x.price)>0?Number(x.price).toLocaleString("pt-PT")+" Kz":"Preço sob consulta"}</div><p class="muted">${esc(x.description||"Sem descrição.")}</p><div class="muted">📍 ${esc(x.city||"Localização não indicada")}</div><div class="btnrow"><a class="btn" target="_blank" rel="noopener" href="${wa(esc(x.phone),esc(x.title))}">Contactar vendedor</a><button class="btn secondary" onclick="removeItem(${Number(x.id)})">Remover</button></div></div></article>`).join("")}
-function removeItem(id){if(!confirm("Remover este anúncio deste navegador?"))return;saveItems(getItems().filter(x=>x.id!==id));render()}
-document.getElementById("listingForm").addEventListener("submit",e=>{e.preventDefault();const phone=document.getElementById("phone").value.trim();if(phone.replace(/\D/g,"").length<9){alert("Introduza um número de WhatsApp válido com indicativo do país.");return}
-const items=getItems();items.unshift({id:Date.now(),title:document.getElementById("title").value.trim(),category:document.getElementById("category").value,price:Number(document.getElementById("price").value)||0,city:document.getElementById("city").value.trim(),phone,emoji:document.getElementById("emoji").value,description:document.getElementById("description").value.trim()});saveItems(items);e.target.reset();render();alert("Anúncio guardado neste navegador. Para ficar visível a outras pessoas, será necessário ligar o aplicativo a uma base de dados online.");window.scrollTo({top:0,behavior:"smooth"})});
-document.getElementById("search").addEventListener("input",render);document.getElementById("filter").addEventListener("change",render);
-document.getElementById("resetDemo").addEventListener("click",()=>{if(confirm("Apagar anúncios locais e restaurar os exemplos?")){saveItems(seed);render()}});
-if(!localStorage.getItem(key))saveItems(seed);render();
+let ads=[];
+try{ads=JSON.parse(localStorage.getItem('fliyerAdsV2')||'[]');if(!Array.isArray(ads))ads=[];}catch(e){ads=[]}
+let selectedPhoto='';
+const money=n=>new Intl.NumberFormat('pt-AO').format(Number(n)||0)+' Kz';
+function phoneNumber(raw){let p=String(raw||'').replace(/\D/g,'');if(p.startsWith('00'))p=p.slice(2);if(p.length===9)p='244'+p;return p;}
+function card(a){const msg=encodeURIComponent('Olá! Tenho interesse no anúncio "'+a.name+'" publicado no Fliyer Express Angola.');const tel=phoneNumber(a.phone||WA_OWNER);const img=a.image||'';return `<article class="card"><img class="product-img" src="${img}" alt="${escapeHtml(a.name)}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'"><div class="card-body"><span class="tag">${escapeHtml(a.category)}</span><h3>${escapeHtml(a.name)}</h3><p class="price">${money(a.price)}</p><div class="location">📍 ${escapeHtml(a.city||'Angola')}</div><p class="desc">${escapeHtml(a.description||'Entre em contacto para mais informações.')}</p><a class="contact" href="https://wa.me/${tel}?text=${msg}" target="_blank" rel="noopener">☏ Contactar vendedor</a></div></article>`;}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){const q=document.getElementById('search').value.trim().toLocaleLowerCase('pt');const cat=document.getElementById('category').value;const all=[...ads,...stock];const filtered=all.filter(a=>(!cat||a.category===cat)&&[a.name,a.description,a.city,a.category].some(v=>String(v||'').toLocaleLowerCase('pt').includes(q)));document.getElementById('listings').innerHTML=filtered.length?filtered.map(card).join(''):'<div class="empty">Não encontrámos anúncios. Experimente outra pesquisa ou publique o seu anúncio.</div>';}
+document.getElementById('search').addEventListener('input',render);document.getElementById('category').addEventListener('change',render);
+document.getElementById('photo').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;if(!f.type.startsWith('image/')){alert('Escolha um ficheiro de imagem.');e.target.value='';return;}if(f.size>2*1024*1024){alert('A imagem deve ter no máximo 2 MB para não encher o armazenamento do telemóvel.');e.target.value='';return;}const r=new FileReader();r.onload=()=>{selectedPhoto=r.result;const p=document.getElementById('preview');p.src=selectedPhoto;p.style.display='block';document.getElementById('photoIcon').style.display='none';};r.readAsDataURL(f);});
+document.getElementById('adForm').addEventListener('submit',e=>{e.preventDefault();const phone=phoneNumber(document.getElementById('phone').value);if(!/^244\d{9}$/.test(phone)){alert('Introduza um número angolano válido com 9 dígitos, por exemplo 950325536.');return;}const a={id:'u'+Date.now(),name:document.getElementById('name').value.trim(),category:document.getElementById('newCategory').value,price:Number(document.getElementById('price').value),city:document.getElementById('city').value.trim(),description:document.getElementById('description').value.trim(),phone,image:selectedPhoto};try{ads.unshift(a);localStorage.setItem('fliyerAdsV2',JSON.stringify(ads));}catch(err){ads.shift();alert('Não foi possível guardar o anúncio. Tente uma fotografia mais pequena.');return;}e.target.reset();selectedPhoto='';document.getElementById('preview').style.display='none';document.getElementById('photoIcon').style.display='block';render();document.getElementById('listings').scrollIntoView({behavior:'smooth'});alert('Anúncio publicado neste navegador! Para aparecer noutros telemóveis, será necessária uma base de dados online.');});
+render();
 </script>
-</body></html>
+</body>
+</html>
